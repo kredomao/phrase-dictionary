@@ -70,12 +70,17 @@ def append_log(user, action, details=""):
 def load_users_from_secrets():
     """Streamlit Cloud の Secrets に "USERS" キーを入れておくこと
     例: USERS = "alice:pass1,bob:pass2"
+    
+    ローカル開発時は .streamlit/secrets.toml に以下を追加：
+    USERS = "your_username:your_password"
     """
     try:
         raw = st.secrets["USERS"]
     except Exception:
-        # ローカル開発用のデフォルト（本番では必ずSecretsを設定）
-        raw = "admin:password123"
+        # Secretsが設定されていない場合はエラー
+        st.error("⚠️ ユーザー認証が設定されていません。管理者に連絡してください。")
+        st.stop()
+        raw = None
     users = {}
     if raw:
         for item in raw.split(","):

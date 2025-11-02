@@ -13,7 +13,8 @@ dist/
 *.egg-info/
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
+.streamlit/credentials.toml
 
 # データベースとログ（ローカル開発用）
 phrases.db
