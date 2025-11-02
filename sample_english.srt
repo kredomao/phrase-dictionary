@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:02,500
+Hello, welcome to our channel!
+
+2
+00:00:02,500 --> 00:00:05,000
+Today we're going to learn something amazing.
+
+3
+00:00:05,500 --> 00:00:08,000
+Let's get started right away.
+
+4
+00:00:08,500 --> 00:00:11,000
+First, let me introduce myself.
+
+5
+00:00:11,500 --> 00:00:14,000
+My name is Alex and I'm your host.
+
